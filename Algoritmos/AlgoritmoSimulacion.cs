@@ -20,50 +20,57 @@ namespace PruebaPrintRafa19_Agosto.Algoritmos
 
             return listaGenerada;
         }
-        public List<int> AlgoritmoCuadradoMedio(int n)
+        public List<int> AlgoritmoCuadradoMedio(int semilla)
         {
             List<int> listaSalida = new List<int>();
-            int pseudoaleatorio = n;
-
+            int mitadCadena = 0;
+            int pseudoaleatorio = 0;
+            int cuadrado = semilla* semilla;
+            string cadena = cuadrado.ToString();
+            if (cadena.Length <= 2) //Checamos si la longitud de la cadena tiene suficientes digitos
+            {
+                throw new ArgumentException("The square of the seed doesn't have enough digits.");
+            }
+            string cadenaModificada = cadena.Substring(1, cadena.Length - 2);
+            mitadCadena = cadenaModificada.Length / 2;
+            if (cadenaModificada.Length <= 3) // Nos aseguramos que cadena modificada tiene los suficientes digitos para hacer la operacion
+            {
+                pseudoaleatorio = Convert.ToInt32(cadenaModificada);
+            }
+            else {   
+                pseudoaleatorio = Convert.ToInt32(cadenaModificada.Substring(mitadCadena - 2, 3));
+             }
+            listaSalida.Add(pseudoaleatorio);
             while (true)
             {
-                // Calculate the square of n
-                int cuadrado = n * n;
-
-                // Convert the squared number to a string
-                string cadena = cuadrado.ToString();
-
-                // Ensure that the string has at least 3 characters
-                if (cadena.Length < 3)
+                cuadrado = pseudoaleatorio * pseudoaleatorio;
+                cadena = cuadrado.ToString();
+                if (cadena.Length <= 2) //Checamos si la longitud de la cadena tiene suficientes digitos
                 {
-                    throw new ArgumentException("The squared number does not have enough digits to perform the algorithm.");
+                    break;
                 }
-
-                // Extract the middle portion of the string
-                int middleStart = (cadena.Length - 3) / 2;  // Start in the middle minus 1
-                string subcadena = cadena.Substring(middleStart, 3);
-
-                // Convert the substring back to an integer
-                pseudoaleatorio = Convert.ToInt32(subcadena);
-
-                // Check if the value already exists in the list
+                cadenaModificada = cadena.Substring(1, cadena.Length - 2);
+                mitadCadena = cadenaModificada.Length / 2;
+                if (cadenaModificada.Length <= 3) // Nos aseguramos que cadena modificada tiene los suficientes digitos para hacer la operacion
+                {
+                    pseudoaleatorio = Convert.ToInt32(cadenaModificada);
+                }
+                else
+                {
+                    pseudoaleatorio = Convert.ToInt32(cadenaModificada.Substring(mitadCadena - 2, 3));
+                }
                 if (listaSalida.Contains(pseudoaleatorio))
                 {
-                    break;  // Stop the loop if a duplicate is found
+                    return listaSalida;
                 }
-
-                // Add the result to the list
-                listaSalida.Add(pseudoaleatorio);
-
-                // Use the pseudoaleatorio for the next iteration
-                n = pseudoaleatorio;
+                else
+                {
+                    listaSalida.Add(pseudoaleatorio);
+                }
             }
-
-            return listaSalida;
+  
         }
-
     }
-
 }
 
 

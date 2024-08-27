@@ -28,105 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.SuspendLayout();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            button5 = new Button();
+            button6 = new Button();
+            dataGridView2 = new DataGridView();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            SuspendLayout();
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(247, 71);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(113, 20);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            textBox5.Location = new Point(247, 71);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(113, 27);
+            textBox5.TabIndex = 0;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(247, 112);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(113, 20);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            textBox6.Location = new Point(247, 112);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(113, 27);
+            textBox6.TabIndex = 1;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(487, 68);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Ejecutar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.Location = new Point(477, 68);
+            button5.Name = "button5";
+            button5.Size = new Size(96, 36);
+            button5.TabIndex = 2;
+            button5.Text = "Ejecutar";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(487, 128);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 51);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Descarga de Excel";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.Location = new Point(477, 168);
+            button6.Name = "button6";
+            button6.Size = new Size(96, 93);
+            button6.TabIndex = 3;
+            button6.Text = "Descarga de Excel";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // dataGridView2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(110, 168);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(249, 122);
-            this.dataGridView2.TabIndex = 4;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(152, 168);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(249, 122);
+            dataGridView2.TabIndex = 4;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 0;
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(100, 23);
+            label3.TabIndex = 0;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(152, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Parametro 1";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            label4.AutoSize = true;
+            label4.Location = new Point(152, 74);
+            label4.Name = "label4";
+            label4.Size = new Size(89, 20);
+            label4.TabIndex = 5;
+            label4.Text = "Parametro 1";
+            label4.Click += label4_Click;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Parametro 2";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            label5.AutoSize = true;
+            label5.Location = new Point(152, 115);
+            label5.Name = "label5";
+            label5.Size = new Size(89, 20);
+            label5.TabIndex = 6;
+            label5.Text = "Parametro 2";
+            label5.Click += label5_Click;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(606, 311);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Name = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            ClientSize = new Size(606, 311);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(dataGridView2);
+            Controls.Add(button6);
+            Controls.Add(button5);
+            Controls.Add(textBox6);
+            Controls.Add(textBox5);
+            Name = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
